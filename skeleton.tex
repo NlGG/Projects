@@ -1,0 +1,388 @@
+\documentclass{jsarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{ascmac}
+\begin{document}
+
+\title{%
+  Rare Disasterと資産価格 \\
+  \large 不動産市場を中心に}
+\author{加藤真大}
+\maketitle
+
+\section{Introduction}
+この研究は、Rare Disaster後の資産価格の変動を、経済主体の資産価格に関する意思決定における情報選択の観点から説明するものである。Rare Disasterとは世界金融恐慌や東日本震災のような発生確率が希ではあるが、マクロ経済に大きな影響を及ぼす事象を指す。Rare Disasterによるショックは経済に大きな負の影響を与えるが、特に資産価格に関してその負の影響が長く残る可能性がある。先行研究においては、エクイティ・プレミアム・パズルへの関心からBarro and Ursua(2008)やGabaix(2012)などがRare Disasterを研究の対象にしてきた。彼らはRare Disaster後にリスク・プレミアムが長期的に上昇していることに着目し、Lucasの資産価格決定モデルに災害への主観的確率を導入することでリスク・プレミアム・パズルを解明することを試みている。災害後には災害への主観的確率が上昇することでリスク・プレミアムが増大するという仮説をおいている。しかし、のちに述べるように、彼らの災害への主観的確率に基づいたアプローチでは、例えば世界金融恐慌や東日本大震災の後の経済データとモデルに基づいた理論値を整合的にするためには、災害の数年後に災害への主観的確率が最大になることを許容しなければならない。災害の数年後に災害への人々の恐れが最高値を取ることは現実的とは言えない。したがって、別のアプローチで資産価格の停滞を説明する必要がある。ここで資産価格の停滞とは、経済の回復に対して資産価格の回復が遅れることを指している。リスク・プレミアムの増大はその意味で資産価格の停滞を意味するものであるが、以下の図１からもGDPの回復に対して株価や不動産の価格の回復が遅れていることが見て取れる。Jリートの株価の時系列を掲載したのは後述するようにトービンのQよりJリートの株価がリートの保有する不動産資産の評価を表していると考えられるからである。したがってJリートの株価を通じて証券市場ではなく不動産市場の動向を観察することができる。
+
+\begin{figure}
+\centering
+\includegraphics[width=13cm]{GDP.jpg}
+\includegraphics[width=13cm]{N225.jpg}
+\includegraphics[width=13cm]{nihonbil.jpg}
+\includegraphics[width=13cm]{land_price.jpg}
+\caption{GDP・日経平均株価・日本ビルファンドの株価・東京都の公示地価（抜粋）}
+\end{figure}
+
+
+日経平均株価、Jリート（日本ビルファンド）の株価、東京都の公示地価（地点はランダムに抽出）の推移図を上に示したが、いずれも災害直後の急激な下落の後も持続的に下がり続けるか、停滞する傾向を示している。さらにGDPの回復の速さと比べても資産価格の停滞は顕著である。のちに示す不動産リートの株価のリスク・プレミアムの増大も考慮にいれると、災害後の資産価格の変動を理解するためには、景気や消費といったマクロな環境とは別に内生的に価格の停滞を引き起こすようなメカニズムを考える必要がある。\\
+　今回の研究では、経済主体の資産価格を利用可能な情報から決定するMorris and Shin(2002)のモデルを基に、他資産からの影響や消費CAPMの考えを取り入れて資産価格停滞のメカニズムの解明に臨む。Morris and Shin(2002)のモデルをMSモデルと呼ぶことにする。MSモデルでは経済主体は、経済主体の各々が市場に持つ情報と、インフレ・ターゲットのように公的に共有された情報の二種類を用いて資産価格を決定している。このMSモデルに新たに利用可能な情報源として似た資産の価格を加えることで、大きな災害後には経済主体の各々が持つ情報や市場に共有された情報よりも似た資産からの情報が資産価格決定の中心になることを示す。似た資産からの影響が大きくなる場合には周囲の資産価格の停滞がその資産価格の停滞を引き起こし、しかも他の情報を利用しないことが経済主体の最適行動となることで、マクロな経済環境から独立して資産価格の停滞が長期化することをMSモデルを拡張したモデルから導く。
+
+\subsection{Rial Estate}
+
+\subsection{Risk Premium Puzzle and Problems with Rare Disaster}
+この論文はリスク・プレミアム・パズルを解き明かすことは目的ではない。研究の中心は情報の選択の仕方を議論することにある。しかし、Morris and Shin(2002)に基づいたモデルはミクロ的な基礎づけが曖昧である。それに比べてLucasが提案した消費CAPMは代表的家計の効用最大化問題から導出されている形で理論的裏付けがなされており、消費CAPMにもとづいて資産価格の変動を議論することで得られる示唆は多い。この章では、試しに消費CAPMを計算することでこの研究の問題意識である資産価格の長期停滞を検討するとともに、のちの章で触れる情報選択モデルの消費CAPMへの導入の前置きとする。\\
+　資産価格や資産のリターンの説明にはConsumption based CAPMがしばしば用いられる。Mehra and Prescott(1985)はConsumption based CAPMを用いてリスク資産のリターンが理論値よりも高い「リスク・プレミアム・パズル」を指摘した。Consumption based CAPMではリスク資産の超過リターンは以下の式で導かれる。
+$$E[r^{t}] - E[r^{f}] = \gamma Cov(r^{i} - r^{j}, g^{c})$$
+図２はJリートの実際の株の超過リターンの推移と、この式に基づいて算出された理論値との比較である。図２から明らかなように上記の定式化では相対的危険回避度を非常に高い値に設定しないと整合的な結果が得られない。特に2008年から2009年を出発点にして実測値が上昇を続けており理論値との乖離を年々広げている。\\
+
+\begin{figure}
+\centering
+\includegraphics[width=13cm]{nihonbil3.jpg}
+\includegraphics[width=13cm]{nihonbil3.jpg}
+\includegraphics[width=13cm]{nihonbil3.jpg}
+\includegraphics[width=13cm]{nihonbil3.jpg}
+\caption{Mehra and Prescott(1985)モデルとJリート株価}
+\end{figure}
+
+
+　したがって、Mehra and Prescott(1985)のモデルでは彼ら指摘したようなエクイティ・プレミアムの問題を回避することができない。そのためエクイティ・プレミアム・パズルを説明する枠組みを新たに考える必要がある。Barro and Ursua(2008)ではRare Disasterをモデルに取り組むことで災害への恐れがリスク・プレミアムを増大させているとした。$b, 0<b<1$を災害による資産の損失率、$p, 0<p<1$を災害の発生確率とすると、彼らの消費CAPMは、
+$$E[r^{t}] - E[r^{f}] = \gamma Cov(r^{i} - r^{j}, g^{c}) + p^{t}E[b((1-b)^{\gamma} - 1] - \sigma^{2}/2 $$
+として定式化される。しかし、このモデルを用いてもエクイティ・プレミアム・パズルを完全に解決することはできない。図３にみるように確かに相対的危険回避度はMehra and Prescott(1985)で想定される値より小さくと済むものの災害への発生確率が年々上昇することになってしまう。特に災害の発生直後で急上昇することは問題ないが災害の発生後しばらく上昇をし続けることは現実的ではない。
+
+\begin{figure}
+\centering
+\includegraphics[width=13cm]{nihonbil3.jpg}
+\includegraphics[width=13cm]{nihonbil3.jpg}
+\includegraphics[width=13cm]{nihonbil3.jpg}
+\includegraphics[width=13cm]{nihonbil3.jpg}
+\caption{Mehra and Prescott(1985)モデルとJリート株価}
+\end{figure}
+
+
+\section{Model Setup}
+\subsection{Beauty Contest Model}
+Morris and Shin(2002)では、投資家のオファー価格ベクトル$a=[a_{i}]$, $i\in[0,1]$に対して以下の効用関数を定義した。$\theta$は資産のファンダメンタルズである。
+$$ u_{i}(a, \theta) = -[(1-\lambda)(a_{i} - \theta)^{2} + \lambda(D_{i} - \bar{D})] $$と定義する。
+ただし、$D_{i} = \int^{1}_{0}(a_{j} - a_{i})^2dj$, $\bar{D} = \int^{1}_{0}D_{j}dj$と定義される。\\
+Morris and Shin(2002)では、他者の予測からの外れ具合を考慮するために$\lambda$を導入しているが、本論文では他者との予測との合致を後述するようなゲームの形で考慮するため、ここでは$\lambda = 0$として無視することにする。
+　$\theta$は観測が不可能であり、各経済主体は$\theta$に関する情報だけを得ている。Morris and Shin(2002)では$\theta$に関する情報としてpublic signalとprivate signalの二種類を与えている。ここで、public signalとは経済主体間で情報の精度が等しいもの、private signalとは経済主体間で情報の精度が異なるものを指している。数式では、public signalは、
+\begin{equation}
+ y = \theta + \eta 
+\end{equation}
+$$ \eta \sim N(0, \sigma^{2}_{\eta}) $$
+と定義される。private signalは
+$$ x_{i} = \theta + \varepsilon_{i} $$
+$$ \varepsilon_{i} \sim N(0, \sigma^{2}_{\varepsilon}) $$
+と定義される。これらの情報を利用することを考慮した各経済主体に対して期待効用最大化の一階条件は、
+$$ a_{i}(y, x_{i}) = (1-\lambda)E(\theta|y, x_{i}) + \lambda \int^{1}_{0}E(a_{j}|y, x_{j})dj $$
+で与えられる。また、
+$$ E[(\theta - (kx_{i} + (1-k)y)]$$
+を最小にするようなkを選ぶことを考えると、
+$$k = \frac{\beta}{\alpha + \beta}$$
+（ただし、$ \alpha = \frac{1}{\sigma^{2}_{\eta}}, \beta = \frac{1}{\sigma^{2}_{\varepsilon}} $）が得られる。よって、オファー価格は唯一の解として、
+$$ a_{i}(y, x_{i}) = kx_{i} + (1-k)y $$
+となる。
+
+\subsection{Spatial Signal}
+Morris and Shin(2002)ではpublic signalとprivate signalからの情報のみを扱っていたが、ここでは更に近い関係を持つ資産からのsignalをspatial signalとして取り入れる。例えば、不動産市場では隣接する不動産資産の価格がspatial signalとして考えられる。以下では、L個の資産からなる不動産市場を考える。そのなかのある資産kに対して経済主体iがオファーする価格を$a_{l,i}$、資産kと近接する資産$j\in L$の集合を$N_{l}$とする。\\
+資産kに関するspatial signalを以下のように定義する。
+$$ z_{l} = \theta + \delta_{l} $$
+$$ \delta_{l} \sim N(0, \sigma^{2}_{\delta}) $$
+　人々が資産の価格付けの際に近い属性の資産を参考にすることは自然な発想であろう。public signalとprivate signalに加えて、新たにspatial signalを考慮に入れることである資産への影響が他の資産にも影響する可能性を考慮にいれることができる。Spatial signalには色々な形の情報が考えられるが、以下では簡単化のためspatial signalは資産$j\in N_{l}$の平均とする。\\
+　複数の資産を仮定したことでpublic signalとprivate signalもそれぞれ、
+$$ y_{l} = \theta_{l} + \eta_{l} $$
+$$ \eta \sim N(0, \sigma^{2}_{\eta}) $$
+$$ x_{l, i} = \theta_{l} + \varepsilon_{l, i} $$
+$$ \varepsilon_{l, i} \sim N(0, \sigma^{2}_{\varepsilon}) $$
+と定義され直される。$\theta_{l}$は資産lのファンダメンタルズを示すので資産ごとに異なる値をとるものとして考える。\\
+　ここで、public signal、private signal、spatial signalの不動産市場における解釈を考える。public signalは政府の全ての個人間と資産間で等しい情報であり、例えば政府のインフレ・ターゲットが挙げられる。private signalは全ての資産間で等しい情報の信頼性を持つが個人間では信頼性が異なるものである。例えば、全ての個人が前期の資産価格から将来の資産価格を予測することを考える。個人iが前期の価格に関して抱くファンダメンタルとの乖離$\epsilon_{l, i}$は資産間で等しく、$\epsilon_{l, i} = \epsilon_{i}$である。最後にspatial signalであるが、これは前述したように近い属性をもつ不動産資産から得られる情報とする。この情報のもつ信頼性は全ての個人間で等しいが資産間で異なる。例えば、八王子の不動産は周りの不動産と比べて価格に変動が小さいが、新宿の不動産では周りの不動産と比べて価格に変動が大きい、ということを想定している。\\
+　これらの情報の定義のもとで個人iの資産lに対するオファー価格$a_{l. i}$は、
+$$ a_{l, i}(y, x_{i}) = kx_{l, i} + hy_{l} + (1 - k - h)z_{l} $$
+$$ k = \frac{\beta(1-\lambda)}{\alpha + \gamma + \beta(1-\lambda)} $$
+$$ h = \frac{\alpha}{\beta(1-\lambda)}k$$
+$$ \alpha = \frac{1}{\sigma^{2}_{\eta}}, \beta = \frac{1}{\sigma^{2}_{\epsilon}}, \gamma = \frac{1}{\sigma^{2}_{\varepsilon}} $$
+
+となる。$a_{l} = \int a_{l, i} dj$とすると、
+$$ a_{l}(y, x) = kx_{l} + hy_{l} + (1 - k - h)z_{l} $$
+が導かれる。ここで、$z_k$を隣接する資産の平均価格であることに注意する。隣接する資産の平均価格$\bar{a}_{l}$は、全ての資産価格からなるベクトル$\bm{a} = \{ a_{l} \}$と隣接関係を表す基準化した行列Wを用いると$\bar{a}_{l}=W\bf{a}$と書ける。よって均衡価格は、
+\begin{eqnarray}
+ &\bm{a} = k\bm{x}_ + h\bm{y} + (1 - k - h)W\bm{a} \\
+ &\bm{a} - (1 - k - h)W\bm{a} = k\bm{x} + h\bm{y} \\
+ &\bm{a} = k(\bm{I} - (1 - k - h)W)^{-1}\bm{x} + h(\bm{I} - (1 - k - h)W)^{-1}\bm{y} 
+\end{eqnarray}
+
+
+\subsection{Information Game}
+Demertzis and Viegi(2008)に基づいたモデルを用いてpublic signalの役割を考察する。Demertzis and ViegiはMorris and Shin(2002)の定式化に沿って、個人iには資産に対する２つの選択肢、すなわち個人iが情報の信頼性によって情報を重み付けして価格を決定する場合と、インフレ・ターゲットのみを情報に用いて価格を決定する場合があるとした。さらにDemertzis and Viegiは資産価格へのショックを取り入れている。彼らの定式化について以下で説明する。
+\subsubsection{Demertzis and Viegi}
+目標とするインフレ$x^{T}$からの乖離を縮め、産出量ギャップ$y$を小さくすることを臨中央銀行の損失関数を次のように定義する。中央銀行はこの関数を最小にするようにインフレ率$x$を選ぶ。
+$$ L|_{\xi} = \frac{1}{2}E[(x - x^{T})^{2} + y^{2}]$$ 
+制約条件としてルーカスの供給関数$y = x - x^{e} + \xi$を与える。$\xi$は供給ショックを表し、平均ゼロ、分散$\sigma^{2}_{\xi}$である。
+\begin{itembox}[l]{Lucas's Supply Function}
+\end{itembox}
+よって、損失関数の一階条件より、
+$$x|_{\xi} = \frac{x^{T}}{2} + \frac{x^{e}}{2} - \frac{\xi}{2} $$
+が得られる。ここではxはショック$\xi$が発生したあとの過去のインフレーションの結果であり、$x^{e}$は民間部門のインフレーションへの期待である。典型的な仮定として、中央銀行がコミットメントを行うことで$x^{e}$を$x^{T}$に操作することができるというものがある。しかし、経済主体がコミットメントに従うという仮定は強すぎるように感じられる。経済主体には中央銀行の政策の他にいくつか利用できる情報があり、その情報を利用することで意思決定をしていると考えられる。その結果として$x^{e} = \int^{1}_{0} x_{j} dj$が形成される。Demertzis and Viegiはこの情報の利用に関してのゲームを論じている。さらに、このゲームの前提として以下の経済主体の行動の順序に関する仮定を与えている。\\
+1. 中央銀行は達成したいインフレ率を最初に決める。\\
+2. ショックが起きる。\\
+3. 民間が利用可能な情報を用いて期待を形成する。\\
+4. 中央銀行がその期待に反応する。\\
+式()を元に$\lambda=0$とおくと、
+$$ u_{i}(x^{e}, x^{T}) \equiv \frac{1}{2} E_{i}(x_{i} - x)^{2} $$ 
+
+public signalは
+$$ y = (x^{T} - \xi) + \eta $$
+private signalは
+
+
+\begin{table}[htb]
+\begin{center}
+  \begin{tabular}{|l||r|r|} \hline
+    $a_{i}$ $\bar{a}$& $x^{e}$ & $x^{T}$ \\ \hline \hline
+    $x_{i}$ & $\frac{\alpha + \beta}{(2\alpha + \beta)^{2}}$ & $\frac{1}{4}\sigma^{2}_{\xi} + \frac{4\alpha + \beta}{(2\alpha + \beta)^{2}}$\\ 
+    $x^{T}$ & $\sigma^{2}_{\xi} + \frac{\alpha }{(2\alpha + \beta)^{2}}$ & $\frac{1}{4}\sigma^{2}_{\xi}$ \\ \hline
+  \end{tabular}
+  \end{center}
+\end{table}
+
+
+
+\subsubsection{Extention of the Information Game}
+　このDemertzis and Viegiのモデルを今回提案したspatial signalを含むモデルに拡張する。個人iには各情報の加重平均とインフレ・ターゲットという２つの選択肢があるとする。
+ついで、その２つの選択肢に加えてインフレ・ターゲットに従わず、private signalとspatial signalのみに従うという選択肢を考える。
+
+\begin{table}
+\begin{center}
+  \begin{tabular}{|l||r|r|r|} \hline
+    $a_{i}$ $\bar{a}$&  $x^{e, 1}$ & $x^{e, 2}$ & $x^{T}$ \\ \hline \hline
+    
+    $x_{i, 1}$ & $\frac{\alpha + \beta + \gamma}{(2\alpha + \beta + 2\gamma)^{2}}$ & $\frac{B}{(2\alpha + \beta + 2\gamma)^2(\beta + 2\gamma)^2}$ & $\frac{1}{4}\sigma^{2}_{\xi} + \frac{4\alpha + \beta}{(2\alpha + \beta)^{2}}$\\
+    
+    $x_{i, 2}$ & $\frac{A}{(2\alpha + \beta + 2\gamma)^2(\beta + 2\gamma)^2}$ & $\frac{\beta + \gamma}{(\beta + 2\gamma)^{2}}$ & $\frac{1}{4}\sigma^{2}_{\xi} + \frac{4\gamma + \beta + 4\gamma}{(\beta + 2\gamma)^{2}}$\\ 
+    $x^{T}$ & $\sigma^{2}_{\xi} + \frac{\alpha + \gamma}{(2\alpha + \beta + 2\gamma)^{2}}$ & $\sigma^{2}_{\xi} + \frac{\gamma }{(\beta + 2\gamma)^{2}}$ & $\frac{1}{4}\sigma^{2}_{\xi}$ \\ \hline
+    
+  \end{tabular}
+  \end{center}
+  
+$$A=4\gamma^3+8\beta\gamma^2-8\alpha\gamma^2+5\beta^2\gamma+12\,a\beta\gamma+20\alpha^2\gamma+\beta^3+4\alpha\beta^2$$
+$$B=4\gamma^3+8\beta\gamma^2+16\alpha\gamma^2+5\beta^2\gamma+20\alpha\beta\gamma+20\alpha^2\gamma+\beta^3+5\alpha\beta^2+4\alpha^2\beta$$
+\end{table}
+
+
+$$ (\alpha + \beta + \gamma)(\beta + 2\gamma)^2 - B = 3\gamma^3+5\beta\gamma^2+15\alpha\gamma^2+2\beta^2\gamma+18\alpha\beta\gamma+20\alpha^2\gamma+\beta^3+4 \alpha\beta^2+4\alpha^2\beta-3\beta$$
+$$ == 3\gamma^3+5\beta\gamma^2+2\beta^2\gamma+\beta^3-3\beta $$
+
+
+$$A - (2\alpha + \beta + 2\gamma)(\beta + \gamma) = -4\alpha(\alpha\beta-4\alpha\gamma+4\gamma^2)$$
+$$ == -16\alpha\gamma^2 $$
+
+
+
+
+$\alpha \rightarrow 0$となるにしたがって、
+
+
+\begin{table}
+\begin{center}
+  \begin{tabular}{|l||r|r|r|} \hline
+    $a_{i}$ $\bar{a}$&  $x^{e, 1}$ & $x^{e, 2}$ & $x^{T}$ \\ \hline \hline
+    
+    $x_{i, 1}$ & $\frac{\alpha + \beta + \gamma}{(2\alpha + \beta + 2\gamma)^{2}}$ & $\frac{\beta + \gamma}{(\beta + 2\gamma)^2}$ & $\frac{1}{4}\sigma^{2}_{\xi} + \frac{4\alpha + \beta}{(2\alpha + \beta)^{2}}$\\
+    
+    $x_{i, 2}$ & $\frac{\beta + \gamma}{(\beta + 2\gamma)^2}$ & $\frac{\beta + \gamma}{(\beta + 2\gamma)^{2}}$ & $\frac{1}{4}\sigma^{2}_{\xi} + \frac{4\gamma + \beta + 4\gamma}{(\beta + 2\gamma)^{2}}$\\ 
+    $x^{T}$ & $\sigma^{2}_{\xi} + \frac{\alpha + \gamma}{(2\alpha + \beta + 2\gamma)^{2}}$ & $\sigma^{2}_{\xi} + \frac{\gamma }{(\beta + 2\gamma)^{2}}$ & $\frac{1}{4}\sigma^{2}_{\xi}$ \\ \hline
+    
+  \end{tabular}
+  \end{center}
+ 
+\end{table}
+
+
+\subsection{the Nash Equilibrium of the Information Game}
+2.2節、2.3節で定義したゲームのナッシュ均衡について考える。2.2節では
+$$\sigma^2_{\xi} < \frac{\beta}{\alpha + \beta^2}$$
+の時にインフレ・ターゲットに従うことが支配戦略となることが表より容易にわかる(Proposition 1 of )。また、
+$$\sigma^2_{\xi} > \frac{\beta}{\alpha + \beta^2}$$
+の時には二つのナッシュ均衡が存在する。
+
+\subsection{Interpretation of the Spatial Signal}
+次にspatial signalのもつ意味について考察する。2.2の議論より均衡資産価格は、
+$$\bm{a} = k(\bm{I} - mW)^{-1}\bm{\theta} + h(\bm{I} - mW)^{-1}\bm{y} $$
+$$ = (k + h)(\bm{I} - mW)^{-1}\bm{\theta} + h(\bm{I} - mW)^{-1}\eta $$
+$$ = (k + h)(\bm{I} + mW + m^2W^2 + ...)^{-1}\bm{\theta} + h(\bm{I} + mW + m^2W^2 + ...)^{-1}\eta $$
+$$m=(1 - k - h)$$
+であった。$\theta$を政府のインフレ目標とショックに分解すると、
+$$\bm{a} = (k + h)(\bm{I} + mW + m^2W^2 + ...)^{-1}\bm{x^T} - (k + h)(\bm{I} + mW + m^2W^2 + ...)^{-1}\bm{\xi} + h(\bm{I} + mW + m^2W^2 + ...)^{-1}\eta $$
+となり、整理すると、
+$$\bm{a} = (1 - m)(\bm{I} + mW + m^2W^2 + ...)^{-1}\bm{x^T} - (1 - m)(\bm{I} + mW + m^2W^2 + ...)^{-1}\bm{\xi} + h(\bm{I} + mW + m^2W^2 + ...)^{-1}\eta $$
+$$= \theta + m(W-\bm{I})(\bm{I} + mW + m^2W^2 + ...)^{-1}\bm{x^T} - m(W-\bm{I})(\bm{I} + mW + m^2W^2 + ...)^{-1}\bm{\xi} + h(\bm{I} + mW + m^2W^2 + ...)^{-1}\eta $$
+$\bm{W} - \bm{I}$は$(\bm{I} + mW + m^2W^2 + ...)^{-1}$で周囲の資産から影響を受けた後の資産lと周りの資産の平均の差を意味している。したがって、最後の式の第3項より明らかなようにspatial signalの存在はmが大きいと供給ショック$\xi$を増幅させる可能性がある。さらにオファー価格を前期の資産からの変化率で決める（$\frac{P_{t+1} - P_{t}}{P_{t}}$、$P_{t}$はt期の資産の価格）こととし $x^{T}$は全ての資産間で等しいインフレ・ターゲットの値になり、最後の式の第二項は0になる。よって、
+$$\bm{a} = \theta - m(W-\bm{I})(\bm{I} + mW + m^2W^2 + ...)^{-1}\bm{\xi} + h(\bm{I} + mW + m^2W^2 + ...)^{-1}\eta $$
+となる。これは$\delta_{l} = - m(W-\bm{I})(\bm{I} + mW + m^2W^2 + ...)^{-1}\bm{\xi} + h(\bm{I} + mW + m^2W^2 + ...)^{-1}\eta$を意味する。つまり、private signalの精度は周りの資産へのショックとpublic signalの精度から決定されることになる。
+\\
+　またspatial signal
+
+
+
+\subsection{Interpretation of the Spatial Signal}
+
+$\bm{a}_{i}$を個人iが持つ資産$l\in L$のオファー価格の集合とすると、
+$$\bm{a}_{i} = k(\bm{I} - mW)^{-1}\bm{x}_{i} + h(\bm{I} - mW)^{-1}\bm{y} + mW\bm{a}
+$$
+これに上式の$\bm{a}$を代入すると、
+$$\bm{a}_{i} = k(\bm{I} - mW)^{-1}\bm{x}_{i} + h(\bm{I} - mW)^{-1}\bm{y} + mWk(\bm{I} - mW)^{-1}\bm{x} + h(\bm{I} - mW)^{-1}\bm{y}
+$$
+整理すると、
+$$\bm{a}_{i} = k(I+mW(\bm{I} - mW)^{-1})\bm{\theta} + h(\bm{I}+mW(\bm{I} - mW)^{-1})\bm{y} + k\varepsilon_{i}
+$$
+全てのiの和を取ると、
+$$\bm{a} = k(\bm{I}+mW(\bm{I} - mW)^{-1})\bm{\theta} + h(\bm{I}+mW(\bm{I} - mW)^{-1})\bm{y}
+$$
+となるので、先に求めた均衡資産価格と係数を比較すると、
+$$I+mW(\bm{I} - mW)^{-1} = (\bm{I} - mW)^{-1}$$
+$$h(I+mW(\bm{I} - mW)^{-1}= (\bm{I} - mW)^{-1} $$
+であるので、オファー価格を書き直すと、
+$$\bm{a}_{i} = k(\bm{I} - mW)^{-1}\bm{\theta} + h(\bm{I} - mW)^{-1}\bm{y} + k\varepsilon_{i}$$
+$$ = (k + h)(\bm{I} - mW)^{-1}\bm{\theta} + k\varepsilon_{i} + h\eta $$
+よって、
+$$ \bm{x}|\xi, x^{e} = \frac{1}{2}\bm{x}^{T} + \frac{1}{2}\bm{x}^{e} -\frac{\xi}{2}$$
+$$ = \frac{1}{2}\bm{x}^{T} + \frac{1}{2}((k + h)(\bm{I} - mW)^{-1}\bm{\theta} +  h(\bm{I} - mW)^{-1}\eta) -\frac{\xi}{2}$$
+$$ = \frac{1}{2}(\bm{I} + (k + h)(\bm{I} - mW)^{-1}\bm{x}^{T}) - \frac{1}{2}(\bm{I} + (k + h)(\bm{I} - mW)^{-1}\bm{\xi}^{T}) + \frac{1}{2}h(\bm{I} - mW)^{-1}\eta $$
+
+
+\subsection{Spatial Signal and Information Game}
+
+
+\subsection{Consumption based CAPM with Rare Disaster}
+　Gabaix(2012)に基づくと、リスク資産のリターンは、$\delta$を無リスク資産のリターンとする時、
+$$r^{e}_{it} = \delta - H_{it}$$
+$$ E[\frac{C_{t+1}}{C_{t}}] = e^{gC}\times (p^{t} +  (1-p^{t}) B_{t+1}) $$
+$$ E[\frac{d_{k, t+1}}{d_{k, t}}] = e^{giD}\times (p^{t} +  (1-p^{t})F_{k, t+1}) $$
+$$ H_{it} = pE^{D}_{t}[B^{-\gamma}_{t+1}F_{i, t+1} - 1]$$
+
+\subsection{Risk Premium with Information Selection}
+$$ E[\frac{D_{k, t+1}}{D_{k, t}}] = k(1+\pi^{private}) + h(1+\pi^{T}) + (1 - k - h)\bar{\pi}_{k}$$
+$$ \pi^{private} \sim AR(p) $$
+$$ \bar{\pi}_{k} = \frac{1}{\Sigma \rho} \Sigma \rho_{l} \pi_{l} $$
+$$ k = \frac{\beta(1-\lambda)}{\alpha + \gamma + \beta(1-\lambda)} $$
+$$ h = \frac{\alpha}{\beta(1-\lambda)}k$$
+$$ \alpha = \frac{1}{\sigma^{2}_{\eta}}, \beta = \frac{1}{\sigma^{2}_{\epsilon}}, \gamma = \frac{1}{\sigma^{2}_{\varepsilon}} $$
+インフレターゲットが現実とあまりに大きく乖離すると効果がなくなる？
+どのぐらいが効果があるのか。
+
+
+
+\section{Data and Analysis}
+東京都の公示地価とJリートの株価を使って上記のモデルを検証する。Jリートは株価ではあるが、企業の資産価値と企業価値が一致するというトービンのQに基づけば、Jリートの株価はリートが保有する不動産の価値を示している。したがって、Jリートの株価を通して、年一回に公表され、かつ、実際の取引に使われる価格ではない公示地価からは得られない、市場で実際に取引されている不動産の時系列データを手にいれることができる。
+
+\begin{itembox}[l]{Tobin's q}
+\end{itembox}
+\subsection{Land Price}
+2000年から2016年までの東京都の公示地価を用いる。公示地価は毎年1月1日時点での土地の価値を表しており、国土交通省が土地の公正な取引のために作成・公表するものである。したがって、公示地価には２つの意味がある。１つは市場での土地の取引価格であり、もう１つは政府によって公正な価格である。したがって、公示地価を上記のモデルの均衡取引価格として用いるとともに、public informationとしても扱うことができる。\\
+2016年の地価基準点からボロノイ図を作成。各年の基準点を面積で加重平均。この処置の妥当性と必要性。
+　地価のパネルを作成。以下の式の係数を推定したい。
+$$ a_{k, i}(y, x_{i}) = kx_{k, i} + hy_{k} + (1 - k - h)z_{k} + \epsilon $$
+　ここで$y_{k}$を資産kの前期の価格、$z_{k}$が近接する不動産資産の価格の平均であるとする。$x_{k, i}$は観測できないため、代わりに
+$$ a^{t}_{l} - a^{t-1}_{l} = h(a^{t-1}_{l} - a^{t-2}_{l}) + (1 - k - h)(\bar{a}^{t}_{l} - \bar{a}^{t-1}_{l}) + \epsilon^{t}_{l} - \epsilon^{t-1}_{l} $$
+
+を推定する。$y_{k}$を資産kの前期の価格であること、$z_{k}$が近接する不動産資産の価格の平均であることを考慮して、隣接行列Wを用いて整理すると、
+$$ a^{t}_{l} - a^{t-1}_{l} = h(a^{t-1}_{l} - a^{t-2}_{l}) + (1 - k - h)W(a^{t}_{l} - a^{t-1}_{l}) + \epsilon^{t}_{l} - \epsilon^{t-1}_{l} $$
+ここで注意が必要なことは、係数k,hは情報のボラティリティに基づくためRare Disasterなどの影響で変化する可能性があることである。したがって、係数が全てのtにおいて等しいことは仮定せず、各期において係数を推定する。上の式では差分を取った際にt期とt-1期の係数が等しいことを仮定しているが、これはprivate informationを除くために前後の期間ではボラティリティが大きく変動しないということを前提としていることによる。係数の推定はOLS、ML、2SLSによって行う。OLSはこのようなケースで不偏推定量が得られないことが知られている。したがって不偏推定量を得るためには操作変数を用いることが考えられる。操作変数は変数と相関があり、かつ、誤差項と無相関なものを用いなければならない。ここでは操作変数として公示地価とは別に公示される都道府県地価の2016年のデータ、地域の駅数、地域の震災時の危険度を用いた。OLSと操作変数を用いた結果を示すと以下のグラフが書ける。
+
+\begin{figure}
+\centering
+\includegraphics[width=13cm]{OLS.jpg}
+\includegraphics[width=13cm]{2sls1.jpg}
+\includegraphics[width=13cm]{2sls2.jpg}
+\caption{公示地価に関する情報選択のパラメーターの推定}
+\end{figure}
+
+\subsubsection{Interpretation of the Equilibrium}
+どの期間にどの均衡にあるのかを考察する。
+
+\begin{figure}
+\centering
+\includegraphics[width=15cm]{equiv.jpg}
+\caption{Mehra and Prescott(1985)モデルとJリート株価}
+\end{figure}
+
+
+以上の結果より、市場での均衡について以下が示唆される。\\
+1. 2002年 - 2004年 : 全ての情報を情報の精度で重み付けして用いている。\\
+2. 2004年 - 2005年 : spatial signalのみに従うことが均衡となっている。\\
+3. 2005年 - 2008年 : 全ての情報を情報の精度で重み付けして用いている。\\
+4. 2008年 : public signalのみに従うことが均衡となっている。\\
+5. 2008年 - 2009年 : 全ての情報を情報の精度で重み付けして用いている。\\
+6. 2009年 - 2010年 : spatial signalのみに従うことが均衡となっている。\\
+6. 2010年 - 2014年 : 全ての情報を情報の精度で重み付けして用いている。\\
+6. 2014年 - : public signalに従うことが均衡となっている。
+
+2章の考察より、spatial signalを通じてprivate signalが用いられているので、spatial signalのみに従うことが均衡となっている場合は、自ずとprivate signalも用いていると考えるべきである。一方、public signalも、spatial signal　？？？？？？？？？その場合に使われている可能性はあるものの、データを見ると前年度比で大きく変化しているのでその可能性は
+
+
+\subsection{JREIT}
+Jリートの株価に上述の情報選択のモデルを当てはめる。public signalにはインフレ・ターゲットを、private signalにはARモデルからの予測値を、spatial signalには近い値動きをするリートの株価を用いる。資産価格と情報選択の議論を深めるためにspatial signalを含まないモデルとspatial signalを含むモデルを両方分析する。最初にspatial signalを含まないモデルの実証分析を行う。始めにspatial signalを利用しないモデルについて推定する。分析の手順は以下の通りである。t期の資産lの価格を$a_{l,t}$とする。まず以下のAR(p)過程の係数をOLSで推定する。
+$$ a_{l,t} = \Sigma^{p}_{j=1} q_{t-j}a_{l,t-j} + \epsilon_{t} $$
+ここで資産lに対する個人iのprivate signalを$x_{i, l} = \Sigma^{p}_{j=1} q_{t-j}a_{l,t-j} + \varepsilon_{i}$（ただし、$\varepsilon_{i}$は平均0）と考える。これは各個人が過去のリターンをprivate signalとして予測を行うことを意味している。従って、
+$$\int^{1}_{0}x_{i, l}di = \Sigma^{p}_{j=1} q_{t-j}a_{l,t-j} = \theta_{l, t} = x^{T} - \xi_{l, t}$$
+となる。\\
+よって、
+$$ x_{l,t}|_{\xi, x^{e}} = \theta + \epsilon_{t} $$
+であり、これは$ x_{l,t}|_{\xi, x^{e}} = \theta + \frac{1}{2}h\eta $より、
+$$ \epsilon_{t} = \frac{1}{2}h\eta$$
+を意味する。AR(p)過程の残差は$h\eta$と等しく、$\frac{1}{2}h\eta \sim N(0, \frac{2\alpha}{2\alpha + \beta}*\sigma^2_{\eta}$であるのでボラティリティの変動$\sigma_{t}$、ただし$h\eta = sigma_{t}\phi$（$\phi$は標準正規分布)、を求めれば$\frac{2\alpha}{(2\alpha + \beta)^2} = sigma_{t}$がわかることになる。また$y$を所与と知れば、$\eta = y - \theta$を用いて時間変動する$\eta$の分散$\sigma^2_{\eta} = \frac{1}{2\alpha}$も得られる。ここで、先に求めた$sigma_{t}$より$\beta = \frac{1}{sigma_{t}}\sqrt{2\alpha} - 2\alpha$が得られるので、これらから2章で検討した均衡の条件
+$$\sigma^2_{\xi} < \frac{\beta}{(2\alpha + \beta)^2} = 1 - \frac{2\alpha}{(2\alpha + \beta)^2}$$
+を検討することができるようになる。ここで注意しなければならないことは、市場の均衡価格が経済主体が政府の目的インフレ率$x^{T}$にしたがっているときは、
+$$ a_{l,t} = x^{T} - \frac{\xi}{2}$$であることである。したがって、$ a_{l,t} = \theta + \epsilon_{t} $では各パラメーターを正しく推定できない可能性がある。真のモデルが$ x_{l,t} = x^{T} - \frac{\xi}{2}$に従っているときに$ x_{l,t} = \theta + \epsilon_{t}$で特定すると、
+
+$$ x_{l,t} = \theta_{l} - \frac{3\xi}{2}$$
+
+目で見て判断する。
+
+均衡状態は？
+
+
+etaが十分小さい時には相関を無視できる。
+
+
+
+
+
+
+インフレ・ターゲットに従うことが唯一のナッシュ均衡になることは有りえないと結論づけることができる。
+
+
+
+次にspatial signalを含むモデルについて考える。今回はJリートの株価を用いているので、公示地価のような地理的に実際に隣接しているデータを使用することができない。また、リートによって扱う物件や土地の性質が異なるため、仮に地理的に隣接する不動産を有するリートの株価の情報が手にはいったとしても直接spatial signalとして利用することは難しい。したがって、今回は隣接している不動産ではなく相関の強い不動産を、つまり相関の強いリートの株価をspatial signalとして用いることとする。
+
+分析の枠組みとしてはVAR過程を適用する。
+
+\subsubsection{Volatility Model}
+ARCHモデルを用いて時間変動するボラティリティを推定する。今回の研究対象である情報選択の問題に焦点を当てるためモデルとしては最も単純とされる以下のモデルを用いる。
+
+
+　同様のプロセスを係数の推定にカルマン・フィルターを用いることで行う。\\
+　同様のプロセスを係数の推定にベイズ推定を用いることで行う。
+
+\subsection{Relationship between Land Price and JREIT}
+
+\section{Simulation}
+\subsection{Volatility and Equilibrium Price}
+3章で推定したパラメーターから2章のモデルを通じて情報のボラティリティを算出する。さらにそのボラティリティの時系列データにボラティリティ推定モデルを適用して将来のボラティリティを予測する。将来のボラティリティが分かれば2章のモデルからどの情報をどの比率で用いるかが算出できる。したがって、将来の価格をinformation gameの枠組みで予測することが可能となる。この章では、そうした予測した将来価格と実現した価格とを比較することで、資産価格の停滞や資産バブル、および政府や中央銀行による資産価格に対する政策の効果を検討する。3章では
+
+
+\subsection{Risk Premium}
+推定したパラメーターと2章のモデルを用いてリスクプレミアムの変動をどれだけ予測できるかを検証する。
+\section{Conclusion}
+Rare Disasterが発生すると資産価格の決定に関してspatial signalの影響が大きくなりショックが増幅されること、spatial signalとprivate signalに依存する均衡に移行することを発見した。さらにMorris and Shin(2002)を拡張したモデルを消費CAPMに応用することでエクイティ・プレミアム・パズルを相対的危険回避度や災害の発生確率に関して現実と整合的な値を設定した上で説明することもできた。結論として複数の資産にRare Disasterが発生すると、ある資産の価格は近い関係の資産の価格を参考に決定されるため、ある資産へのショックが増幅されるメカニズムが存在することがわかった。
+
+
+\section{References}
+
+\section{Appendix}
+\subsection{Consumption CAPM}
+
+
+
+
+\end{document}
